@@ -77,9 +77,9 @@ defmodule EctoEnum do
         def load(int) when is_integer(int) do
           {:ok, unquote(enum_map)[int]}
         end
-        
+
         def load(str) when is_binary(str) do
-          {:ok, unquote(enum_map)[str]}
+          {:ok, unquote(enum_map_string)[str]}
         end
 
         def dump(term) do
@@ -137,3 +137,4 @@ defmodule EctoEnum do
 
   def dump(_), do: :error
 end
+
